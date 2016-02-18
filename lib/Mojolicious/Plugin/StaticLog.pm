@@ -1,7 +1,7 @@
 package Mojolicious::Plugin::StaticLog;
 use Mojo::Base 'Mojolicious::Plugin';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub register {
     my ($self, $app, $conf) = @_;
@@ -79,6 +79,10 @@ or
   $plugin->register($app, {level => $level}) # where $level =~ /debug|info|warn|error|fatal/
 
 Adds an appropriate after_static hook for loggin static file responses.
+
+=head1 REPOSITORY
+
+Open-Sourced at Github: L<https://github.com/frank-carnovale/Mojolicious-Plugin-StaticLog>.
 
 =head1 COPYRIGHT AND LICENSE
 
