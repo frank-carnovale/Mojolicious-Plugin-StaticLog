@@ -35,13 +35,13 @@ Mojolicious::Plugin::StaticLog - Show Static response details in the log
 
     # Mojolicious
     $app->plugin('StaticLog');
+    # or
     $app->plugin( StaticLog => {level=>'info'} );
 
     # Mojolicious::Lite
     plugin 'StaticLog';
 
     # now, in a log file near you..  The lines marked "Static" are new. e.g..
-
     [Thu Feb 18 13:56:09 2016] [debug] GET "/dyngrp/11/pvscat"
     [Thu Feb 18 13:56:09 2016] [debug] Routing to controller "Stuff::Controller::Oauth2" and action "ok"
     [Thu Feb 18 13:56:09 2016] [debug] Routing to controller "Stuff::Controller::Pvscat" and action "page"
@@ -63,7 +63,7 @@ By default logs in debug level only.  Will respond to dynamically changed log le
 
 =head1 REASON
 
-L<Mojolicious> includes a static file server L<Mojolicious::Static> which does some very clever things, silently.  With this Plugin you can trace which static files your app is serving and you will also easily identify when the browser is getting a fresh version of your static resource (e.g. Static 200 19157 /js/stuff.js) and when it's getting a zero-content "Not Modified" response (e.g. Static 304 0 /img/searching.gif).
+L<Mojolicious> includes a static file server L<Mojolicious::Static> which does some very clever things, silently.  With this Plugin you can trace which static files your app is serving and you will also easily identify when the browser is getting a fresh version of your static resource e.g. C<Static 200 19157 /js/stuff.js> and when it's getting a zero-content "Not Modified" response e.g. C<Static 304 0 /img/searching.gif>.
 
 =head1 METHODS
 
@@ -76,7 +76,7 @@ L<Mojolicious::Plugin> and implements the following new ones.
 
 or
 
-  $plugin->register($app, {level => $level}) # where $level =~ /debug|info|error|fatal/
+  $plugin->register($app, {level => $level}) # where $level =~ /debug|info|warn|error|fatal/
 
 Adds an appropriate after_static hook for loggin static file responses.
 
