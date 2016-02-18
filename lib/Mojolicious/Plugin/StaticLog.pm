@@ -92,6 +92,6 @@ This program is free software, you can redistribute it and/or modify it under th
 
 =head1 SEE ALSO
 
-L<Mojolicious::Log>, L<Mojolicious::Static>, L<Mojolicious>, L<Mojolicious::Guides>, L<http://mojolicious.org>.
+L<Mojo::Log>, L<Mojolicious::Static>, L<Mojolicious>, L<Mojolicious::Guides>, L<http://mojolicious.org>.
 
 =cut
