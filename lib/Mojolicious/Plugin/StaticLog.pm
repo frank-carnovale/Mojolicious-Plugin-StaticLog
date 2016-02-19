@@ -78,7 +78,7 @@ or
 
   $plugin->register($app, {level => $level}) # where $level =~ /debug|info|warn|error|fatal/
 
-Adds an appropriate after_static hook for loggin static file responses.
+Adds an appropriate after_static hook for logging static file responses.
 
 =head1 REPOSITORY
 
