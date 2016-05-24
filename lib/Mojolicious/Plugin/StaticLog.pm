@@ -12,8 +12,7 @@ sub register {
         after_static => sub {
             my $c        = shift;
             my $log      = $c->app->log;
-            my $is_level = "is_$level";
-            return unless $log->$is_level;
+            return unless $log->is_level($level);
             my $path = $c->req->url->path;
             my $size = sprintf '%6s', $c->res->content->body_size;
             my $code = $c->res->code;
