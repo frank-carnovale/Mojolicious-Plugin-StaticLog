@@ -7,7 +7,7 @@ WriteMakefile(
   NAME         => 'Mojolicious::Plugin::StaticLog',
   VERSION_FROM => 'lib/Mojolicious/Plugin/StaticLog.pm',
   AUTHOR       => 'Frank Carnovale <frankc@cpan.org>',
-  PREREQ_PM    => {'Mojolicious' => '6.44'},
+  PREREQ_PM    => {'Mojolicious' => '8.02'},
   LICENSE      => 'artistic_2', 
   test         => {TESTS => 't/*.t'}
 );
